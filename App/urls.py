@@ -9,6 +9,8 @@ urlpatterns = [
     path('speaker/on/<str:id>', views.SpeakerONStautsView, name = 'speaker-on'),
     path('speaker/off/<str:id>', views.SpeakerOFFStatusView, name = 'speaker-off'),
 
-    path('vbot/<str:id>', views.SelectVBBotView, name = 'select-vbot')
+    path('vbot/<str:id>', views.SelectVBBotView, name = 'select-vbot'),
+    path('bot-status/<str:id>', views.Botstatus, name = 'bot-status'),
+    path('call-another/<str:id>', views.CallAnotherView, name = 'call-another')
 
 ]

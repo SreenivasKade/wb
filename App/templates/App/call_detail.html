@@ -28,6 +28,7 @@
                     <h5>Bot is communicating with : <span  style="color: orangered;">{{mob_no}}</span></h5>
                     <br>
                     <br>
+                    <h6>Speaker Status: {{m.speaker}}</h6><br>
                     <a href="{% url 'App:speaker-on' b.id%}" 
                        class = "btn btn-danger btn-sm">
                        Speaker on
@@ -39,7 +40,7 @@
                     </a>
 
                     <br><br>
-                    <a href="{% url 'App:select-bot' b.id %}" class = "btn btn-success btn-sm">Call Another Number</a>
+                    <a href="{% url 'App:call-another' b.id %}" class = "btn btn-success btn-sm">Call Another Number</a>
                     <br>
                     <!-- <a href="" class="btn btn-secondary btn-sm">Speaker</a> -->
 
