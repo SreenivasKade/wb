@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    color:black;
+    
+}
+.Container{
+    display:flex;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.ContainerBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255,255, 0.05),
+    10px 10px 15px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.ContainerBox:hover{
+    color:red;
+    font: size 35px;
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255,255, 0.05),
+    10px 10px 15px rgba(0,0,0,0.5),
+    inset -10px -10px 15px rgba(255, 255,255, 0.05),
+    inset 10px 10px 15px rgba(0,0,0,0.5);
+}
+
+
+
+
+  
+  /* Style all font awesome icons */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: right;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  /* Instagram */
+  .fa-instagram {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  /* Linkedin */
+  .fa-linkedin {
+    background: #55ACEE;
+    color: white;
+  }
+
+

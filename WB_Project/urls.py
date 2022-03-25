@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('app/vbot/1/Remote-Control/', include('ControlsApp.urls')),
     path('', include('AccountsApp.urls')),
     path('app/', include('App.urls')),
     path('api/', include('api.urls'))

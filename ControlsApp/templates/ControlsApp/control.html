@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remote control</title>
+    <!-- Remote control css file link -->
+        <link rel="stylesheet" href="{% static 'assets/css/control.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Remote control css file link end -->
+<!--social media apps link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+<body>
+     <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+            <div class="col-4" id="control">
+                <center><h3 class="title">BLACK&WHITE</h3></center>
+                <br><br>
+              <div class="container">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        
+                      </div>
+                  
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <li class="pull-left"><a href="#">Vistan NextGen</a></li>
+                          <li class="pull-left"><a  href="{% url 'App:home' %}">Home</a></li>
+                          <li><a href="{% url 'AccountsApp:logout' %}" class="pull-left">Logout</a></li>
+                       
+                        </ul>
+                      </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                  </nav>
+                </div>
+            
+
+                
+
+                    <center>
+
+                        <div class="ContainerBox">
+                            <button onclick="Upfun()" href="{% url 'ControlsApp:up' %}">
+                                <i class="fas fa-arrow-up"></i></button>
+                            
+                        </div>
+
+                        <div class="Container" >
+                            <div class="ContainerBox">
+                                <button onclick="Leftfun()" href="{% url 'ControlsApp:left' %}"> 
+                                <i class="fas fa-arrow-left"></i></button>
+                            </div>
+
+                            <div class="ContainerBox">
+                                <button onclick="Stopfun()"  href="{% url 'ControlsApp:stop' %}">
+                                    <i class="fas fa-pause"></i></button>
+                            </div>
+
+                            <div class="ContainerBox">
+                                <button onclick="Rightfun()" href="{% url 'ControlsApp:right' %}" >
+                                <i class="fas fa-arrow-right"></i></button>
+                            </div>
+
+                        </div>
+                        <div class="ContainerBox">
+                            <button onclick="Downfun()" href="{% url 'ControlsApp:down' %}">
+                            <i class="fas fa-arrow-down"></i></button>
+                        </div>
+                    </center>
+
+
+                      <div class='jumbotron'>
+                        <footer id="footer">   
+                            <div class="container d-md-flex py-4" >
+                              <div class="container" align="left">
+                                <div class="copyright">
+                                  &copy; 2021 &nbsp;<strong><span> Vistan Nextgen Pvt Ltd</span></strong>. All Rights Reserved
+                                </div>    
+                              </div>
+                              <div class="container" align="right">
+                                <a href="https://twitter.com/nextgenvistan" class="twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/vistannextgen1/" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/vistannextgen/" class="instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://in.linkedin.com/company/vistannextgen" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                              </div>
+                            </div>  
+                          </footer>
+                        </div>
+
+        </div>
+
+        <div class="col-4">
+            
+        </div>
+        </div>
+        </div> 
+
+
+    <script>
+        function Upfun(){
+            console.log('control is executed');
+            $('#control').load(location.href+"up").fadeIn("slow");
+            // console.log(location.href+"up");
+        }
+
+        function Leftfun(){
+            console.log('control is executed');
+            $('#control').load(location.href+"left").fadeIn("slow");
+            // console.log(location.href+"up");
+        }
+
+        function Stopfun(){
+            console.log('control is executed');
+            $('#control').load(location.href+"stop").fadeIn("slow");
+            // console.log(location.href+"up");
+        }
+
+        function Rightfun(){
+            console.log('control is executed');
+            $('#control').load(location.href+"right").fadeIn("slow");
+            // console.log(location.href+"up");
+        }
+
+        function Downfun(){
+            console.log('control is executed');
+            $('#control').load(location.href+"down").fadeIn("slow");
+            // console.log(location.href+"up");
+        }
+    </script>
+
+
+
+  
+</body>
+</html>

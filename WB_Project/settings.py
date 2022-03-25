@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'App',
     'AccountsApp',
+    'ControlsApp',
     'rest_framework',
     'api',
 ]
